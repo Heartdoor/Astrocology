@@ -1,0 +1,23 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://bgsse3kqva8at"]
+
+[ext_resource type="Texture2D" uid="uid://cvj5ofga1nb2h" path="res://OBJECTS/WORLDOBJECT/SPRITES/buildingWaterTower.png" id="1_oucp6"]
+[ext_resource type="Texture2D" uid="uid://carbcsb4h4aao" path="res://OBJECTS/WORLDOBJECT/SPRITES/buildingWaterTowerEmpty.png" id="1_tegig"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_tegig")
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_oucp6")
+}],
+"loop": true,
+"name": &"full",
+"speed": 5.0
+}]

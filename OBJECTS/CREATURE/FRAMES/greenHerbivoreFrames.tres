@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://st4s55kynb0p"]
+
+[ext_resource type="Texture2D" uid="uid://ba6vf3huexv17" path="res://OBJECTS/CREATURE/SPRITES/green.png" id="1_7lujd"]
+[ext_resource type="Texture2D" uid="uid://ceyjuilxvxbwe" path="res://OBJECTS/CREATURE/SPRITES/greenConsume.png" id="1_lxh54"]
+[ext_resource type="Texture2D" uid="uid://cbp1xxkngn81n" path="res://OBJECTS/CREATURE/SPRITES/greenSleep.png" id="3_qnwp0"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lxh54")
+}],
+"loop": true,
+"name": &"consume",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7lujd")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qnwp0")
+}],
+"loop": true,
+"name": &"sleep",
+"speed": 5.0
+}]

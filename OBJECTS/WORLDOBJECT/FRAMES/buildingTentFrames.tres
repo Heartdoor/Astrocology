@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" load_steps=2 format=3 uid="uid://b5jfu3u7m84bt"]
+
+[ext_resource type="Texture2D" uid="uid://ctjrw1c1mx1q8" path="res://OBJECTS/WORLDOBJECT/SPRITES/tent.png" id="1_3aee7"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_3aee7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]

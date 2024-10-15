@@ -1,0 +1,89 @@
+[gd_scene load_steps=7 format=3 uid="uid://b4i0bt7un8uxm"]
+
+[ext_resource type="Script" path="res://OBJECTS/CREATURE/Creature.cs" id="1_8htxe"]
+[ext_resource type="SpriteFrames" uid="uid://cvfjlf7i2aigy" path="res://OBJECTS/CREATURE/FRAMES/blueHerbivoreFrames.tres" id="2_b28wp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_teb5x"]
+radius = 2.0
+height = 6.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e1kj4"]
+radius = 0.896864
+height = 5.38117
+
+[sub_resource type="LabelSettings" id="LabelSettings_wlnbj"]
+line_spacing = 1.0
+font_size = 10
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_irdu1"]
+radius = 11.6592
+height = 55.6054
+
+[node name="Creature" type="CharacterBody2D" groups=["Creature"]]
+y_sort_enabled = true
+motion_mode = 1
+wall_min_slide_angle = 0.0
+script = ExtResource("1_8htxe")
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(4, -11)
+sprite_frames = ExtResource("2_b28wp")
+animation = &"consume"
+speed_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_teb5x")
+disabled = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+rotation = 1.5708
+scale = Vector2(1.115, 1.115)
+shape = SubResource("CapsuleShape2D_e1kj4")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+unique_name_in_owner = true
+path_desired_distance = 10.0
+path_max_distance = 800.0
+avoidance_enabled = true
+radius = 6.0
+neighbor_distance = 13320.5
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(-39, 15)
+scale = Vector2(0.5, 0.5)
+
+[node name="TagsLabel" type="Label" parent="Node2D"]
+unique_name_in_owner = true
+offset_left = 38.0
+offset_top = -12.0
+offset_right = 121.0
+offset_bottom = 17.0
+text = "hello
+"
+label_settings = SubResource("LabelSettings_wlnbj")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="CanSocialRingSprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+z_index = -2
+position = Vector2(0, 35)
+
+[node name="clickableArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="clickableArea"]
+position = Vector2(4, -9)
+rotation = 1.5708
+scale = Vector2(1.115, 1.115)
+shape = SubResource("CapsuleShape2D_irdu1")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+z_index = -4
+position = Vector2(3, -32)

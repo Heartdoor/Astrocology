@@ -1,0 +1,82 @@
+[gd_scene load_steps=7 format=3 uid="uid://csfdo5cmn3jis"]
+
+[ext_resource type="Script" path="res://OBJECTS/WORLDOBJECT/WorldObject.cs" id="1_fxih3"]
+[ext_resource type="SpriteFrames" uid="uid://cbd4m3f0uilqc" path="res://OBJECTS/WORLDOBJECT/FRAMES/buildingCapsuleFrames.tres" id="2_gixm8"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_teb5x"]
+radius = 7.0
+height = 22.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e1kj4"]
+radius = 3.21865e-06
+height = 10.7623
+
+[sub_resource type="LabelSettings" id="LabelSettings_wlnbj"]
+line_spacing = 1.0
+font_size = 10
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kkfh6"]
+radius = 13.4529
+height = 28.6996
+
+[node name="WorldObject" type="CharacterBody2D" groups=["WorldObject"]]
+y_sort_enabled = true
+disable_mode = 1
+motion_mode = 1
+wall_min_slide_angle = 0.0
+script = ExtResource("1_fxih3")
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+sprite_frames = ExtResource("2_gixm8")
+animation = &"idle"
+speed_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_teb5x")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-3, -1)
+rotation = 1.5708
+scale = Vector2(1.115, 1.115)
+shape = SubResource("CapsuleShape2D_e1kj4")
+
+[node name="CanSocialRingSprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+z_index = -2
+position = Vector2(0, 35)
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(-2, 10)
+scale = Vector2(0.5, 0.5)
+
+[node name="TagsLabel" type="Label" parent="Node2D"]
+unique_name_in_owner = true
+offset_left = -40.0
+offset_top = 14.0
+offset_right = 43.0
+offset_bottom = 43.0
+text = "hello
+"
+label_settings = SubResource("LabelSettings_wlnbj")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="clickableArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="clickableArea"]
+position = Vector2(-2, 3)
+rotation = -6.28319
+scale = Vector2(1.115, 1.115)
+shape = SubResource("CapsuleShape2D_kkfh6")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+z_index = -14
+position = Vector2(-1, -21)

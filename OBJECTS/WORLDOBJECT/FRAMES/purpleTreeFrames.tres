@@ -1,0 +1,28 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://dqdpgnqg8u0m7"]
+
+[ext_resource type="Texture2D" uid="uid://b8ga2bjqhi2xe" path="res://OBJECTS/WORLDOBJECT/SPRITES/treePurpleEmpty.png" id="1_556is"]
+[ext_resource type="Texture2D" uid="uid://dre5dbemrciw6" path="res://OBJECTS/WORLDOBJECT/SPRITES/treePurple.png" id="2_21hjh"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_556is")
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_21hjh")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"stump",
+"speed": 5.0
+}]

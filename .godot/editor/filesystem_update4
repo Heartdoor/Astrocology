@@ -1,0 +1,9 @@
+res://MAIN/Main.tscn
+res://OBJECTS/CHARACTER/FRAMES/humanFrames.tres
+res://MAIN/new_theme.tres
+res://OBJECTS/CREATURE/creature.tscn
+res://OBJECTS/WORLDOBJECT/world_object.tscn
+res://OBJECTS/CHARACTER/character.tscn
+res://MAIN/test.tscn
+res://OBJECTS/RADIAL MENU/radial_menu.tscn
+res://OBJECTS/RADIAL MENU/arm.tscn

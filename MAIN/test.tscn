@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://cdy1nf2nr6mka"]
+
+[ext_resource type="Texture2D" uid="uid://p58u2ivm8iim" path="res://OBJECTS/E/sand.png" id="1_3n3lk"]
+[ext_resource type="Texture2D" uid="uid://b832dbo3u3b36" path="res://OBJECTS/CHARACTER/SPRITES/human.png" id="2_06mqk"]
+[ext_resource type="Script" path="res://OBJECTS/SPAWNERS/Spawn.cs" id="3_i5yoh"]
+[ext_resource type="PackedScene" uid="uid://bveqg14fbtg8i" path="res://OBJECTS/CHARACTER/character.tscn" id="4_w5spq"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_3gd83"]
+vertices = PackedVector2Array(3452, -2214, 2847, 1629, -2989, 1462, -2710, -2262, 1640, -2302)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(1640, -2312, -2720, -2272, -3000, 1472, 2856, 1640, 3464, -2224)])
+source_geometry_group_name = &"navigation_polygon_source_group"
+
+[node name="Node2D" type="Node2D"]
+
+[node name="MainNavRegion" type="NavigationRegion2D" parent="."]
+position = Vector2(-24, -176)
+navigation_polygon = SubResource("NavigationPolygon_3gd83")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -100
+texture = ExtResource("1_3n3lk")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Human" type="Sprite2D" parent="Node2D"]
+position = Vector2(240, 40)
+scale = Vector2(2, 2)
+texture = ExtResource("2_06mqk")
+script = ExtResource("3_i5yoh")
+sceneToSpawn = ExtResource("4_w5spq")
+species = 1

@@ -1,0 +1,23 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://drn60jum5gies"]
+
+[ext_resource type="Texture2D" uid="uid://3fc6isdcgyjd" path="res://OBJECTS/WORLDOBJECT/SPRITES/greenBushEmpty.png" id="1_kuiop"]
+[ext_resource type="Texture2D" uid="uid://b8iqoxm6lbkhk" path="res://OBJECTS/WORLDOBJECT/SPRITES/greenBush.png" id="1_qwktr"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_kuiop")
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qwktr")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]

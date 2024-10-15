@@ -1,0 +1,125 @@
+[gd_scene load_steps=9 format=3 uid="uid://bveqg14fbtg8i"]
+
+[ext_resource type="Script" path="res://OBJECTS/CHARACTER/Character.cs" id="1_qr8ck"]
+[ext_resource type="SpriteFrames" uid="uid://u3t80pk6kc7c" path="res://OBJECTS/CHARACTER/FRAMES/humanFrames.tres" id="2_alah8"]
+[ext_resource type="Texture2D" uid="uid://qsp7yvd1swqx" path="res://OBJECTS/E/selection.png" id="3_1qoon"]
+[ext_resource type="Texture2D" uid="uid://b0bbhcc1mi5ds" path="res://OBJECTS/CHARACTER/SPRITES/danger.png" id="4_aegly"]
+[ext_resource type="Texture2D" uid="uid://dwfifvn0xy5hf" path="res://OBJECTS/CHARACTER/SPRITES/guard.png" id="4_sws88"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_teb5x"]
+radius = 2.0
+height = 6.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e1kj4"]
+radius = 10.7623
+height = 26.9058
+
+[sub_resource type="LabelSettings" id="LabelSettings_wlnbj"]
+line_spacing = 1.0
+font_size = 10
+font_color = Color(0, 0, 0, 1)
+
+[node name="Character" type="CharacterBody2D" groups=["Character"]]
+y_sort_enabled = true
+motion_mode = 1
+wall_min_slide_angle = 0.0
+script = ExtResource("1_qr8ck")
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, -14)
+sprite_frames = ExtResource("2_alah8")
+animation = &"walk"
+frame_progress = 0.0386564
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_teb5x")
+disabled = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -13)
+rotation = -6.28319
+scale = Vector2(1.115, 1.115)
+shape = SubResource("CapsuleShape2D_e1kj4")
+
+[node name="GuardSphere" type="Area2D" parent="."]
+
+[node name="collision" type="CollisionShape2D" parent="GuardSphere"]
+position = Vector2(0, -13)
+rotation = -6.28319
+scale = Vector2(11.565, 7.175)
+shape = SubResource("CapsuleShape2D_e1kj4")
+
+[node name="clickableArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="clickableArea"]
+position = Vector2(0, -13)
+rotation = -6.28319
+scale = Vector2(1.115, 1.115)
+shape = SubResource("CapsuleShape2D_e1kj4")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+unique_name_in_owner = true
+path_desired_distance = 10.0
+path_max_distance = 800.0
+avoidance_enabled = true
+radius = 6.0
+neighbor_distance = 13320.5
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(-39, 15)
+scale = Vector2(0.5, 0.5)
+
+[node name="TagsLabel" type="Label" parent="Node2D"]
+unique_name_in_owner = true
+offset_left = 38.0
+offset_top = -24.0
+offset_right = 121.0
+offset_bottom = 5.0
+text = "hello
+"
+label_settings = SubResource("LabelSettings_wlnbj")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="SelectedRing" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+z_index = -2
+position = Vector2(1, -2)
+texture = ExtResource("3_1qoon")
+
+[node name="Guard" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(1, -17)
+texture = ExtResource("4_sws88")
+
+[node name="Danger" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+z_index = -2
+position = Vector2(1, -17)
+texture = ExtResource("4_aegly")
+
+[node name="Shadow" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+z_index = -4
+position = Vector2(0, -23)
+
+[node name="actNode" type="Node2D" parent="."]
+position = Vector2(-58.5, 22.5)
+scale = Vector2(0.5, 0.5)
+
+[node name="act" type="Label" parent="actNode"]
+unique_name_in_owner = true
+offset_left = 77.0
+offset_top = -129.0
+offset_right = 160.0
+offset_bottom = -100.0
+text = "hello
+"
+label_settings = SubResource("LabelSettings_wlnbj")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true

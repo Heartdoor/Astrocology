@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" load_steps=2 format=3 uid="uid://cbd4m3f0uilqc"]
+
+[ext_resource type="Texture2D" uid="uid://dqpjdp76ilrph" path="res://OBJECTS/WORLDOBJECT/SPRITES/capsule.png" id="1_w7q8u"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_w7q8u")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]

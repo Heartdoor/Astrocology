@@ -1,0 +1,18 @@
+res://MAIN/Main.tscn::e89eb2c22596e31dc09e47d94a3c92cb::1711099752::res://.godot/exported/133200997/export-1bcc2a801a892989b5b88f69b61bbdbf-Main.scn
+res://OBJECTS/CREATURE/FRAMES/blueHerbivoreFrames.tres::201f950b6e45de622e0e75bba9df351c::1710672055::res://.godot/exported/133200997/export-1eee6ac1b768a88bfb7d649ff733b3d5-blueHerbivoreFrames.res
+res://OBJECTS/CREATURE/creature.tscn::84ff5b4c923bc911eb2d9dfe1c1e63c8::1711099752::res://.godot/exported/133200997/export-78c3cf75aa8855e9c982eb8b332f6234-creature.scn
+res://OBJECTS/WORLDOBJECT/world_object.tscn::46861f91dd00d0a2b2271cf76380cba1::1711099752::res://.godot/exported/133200997/export-cbdb6986355ee49b0a1dfe926fdabe40-world_object.scn
+res://MAIN/new_theme.tres::0628c0a195a17fdd09fd1dc7b61d3d23::1711099239::res://.godot/exported/133200997/export-23b993c4592b54bc12b36200e55698a5-new_theme.res
+res://MAIN/test.tscn::0d57a88332df0bdb778b5b4df8348660::1711099752::res://.godot/exported/133200997/export-dddf3c19aa876168b5dbcaac15867f64-test.scn
+res://OBJECTS/CHARACTER/FRAMES/humanFrames2.tres::32b213415877180987e5156b36d8f5f5::1710860343::res://.godot/exported/133200997/export-b3694eeb65b793f9d04efa252439a6db-humanFrames2.res
+res://OBJECTS/CHARACTER/FRAMES/humanFrames.tres::dd18e6560e6f08e82c58e1e4d62c0370::1710856606::res://.godot/exported/133200997/export-857a13843422b7d32a4ac400dc0a9502-humanFrames.res
+res://OBJECTS/CHARACTER/character.tscn::cf60c4a8f959016bcc3172910179d87a::1711099752::res://.godot/exported/133200997/export-4344cca0ae5873d64cc18a9dec7dc988-character.scn
+res://OBJECTS/CREATURE/FRAMES/greenHerbivoreFrames.tres::853dcda627a62d2d20d436866a6f29c6::1710672055::res://.godot/exported/133200997/export-f645014b17185d0c331ce48daac683d8-greenHerbivoreFrames.res
+res://OBJECTS/RADIAL MENU/arm.tscn::8ab2d55daa30d3a707e258add9f38df5::1711099753::res://.godot/exported/133200997/export-6d4bd9eebd62076ef9ad0ec7195256ee-arm.scn
+res://OBJECTS/RADIAL MENU/radial_menu.tscn::8b2b07c5b0d97884e161d79b1237c91e::1711099752::res://.godot/exported/133200997/export-76b9178e068572a6a46fde018ae25c02-radial_menu.scn
+res://OBJECTS/WORLDOBJECT/FRAMES/buildingCapsuleFrames.tres::66786362d2653ba6ab2549f0d1b903b4::1710676980::res://.godot/exported/133200997/export-1615d5be9c764b01cddab7859a061a16-buildingCapsuleFrames.res
+res://OBJECTS/WORLDOBJECT/FRAMES/buildingTentFrames.tres::788b2bc489b70b99451060e7e656f328::1710676999::res://.godot/exported/133200997/export-98710765adb0b3e3c070f0ac64e104c8-buildingTentFrames.res
+res://OBJECTS/WORLDOBJECT/FRAMES/buildingWaterTowerFrames.tres::00997b298b02c2cc0df110934c6feab0::1710839677::res://.godot/exported/133200997/export-6ce87252620e6f6624da1f22bc14add0-buildingWaterTowerFrames.res
+res://OBJECTS/WORLDOBJECT/FRAMES/greenBushFrames.tres::b13d542b2217b3f001e80a5193acf4d0::1710597965::res://.godot/exported/133200997/export-2afcf1a2cd7ad1d015a5e24dc9037058-greenBushFrames.res
+res://OBJECTS/WORLDOBJECT/FRAMES/purpleTreeFrames.tres::59d6ac63e0a456705348fbd9cbf6044b::1711028563::res://.godot/exported/133200997/export-86427bf890263e0ae63f1e5327319221-purpleTreeFrames.res
+res://OBJECTS/WORLDOBJECT/FRAMES/waterFrames.tres::6325217a6bfca3280614883c431263d2::1710849140::res://.godot/exported/133200997/export-e2e6e76d098029b6044bb3c68a1fcf46-waterFrames.res

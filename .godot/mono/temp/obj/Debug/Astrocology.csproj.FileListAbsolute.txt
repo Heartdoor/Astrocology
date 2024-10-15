@@ -1,0 +1,17 @@
+C:\Users\Admin\Documents\GODOT\Astrocology\.godot\mono\temp\obj\Debug\Astrocology.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\GODOT\Astrocology\.godot\mono\temp\obj\Debug\Astrocology.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Documents\GODOT\Astrocology\.godot\mono\temp\obj\Debug\Astrocology.AssemblyInfoInputs.cache
+C:\Users\Admin\Documents\GODOT\Astrocology\.godot\mono\temp\obj\Debug\Astrocology.AssemblyInfo.cs
+C:\Users\Admin\Documents\GODOT\Astrocology\.godot\mono\temp\obj\Debug\Astrocology.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GODOT\Astrocology\.godot\mono\temp\bin\Debug\Astrocology.deps.json
+C:\Users\Admin\Documents\GODOT\Astrocology\.godot\mono\temp\bin\Debug\Astrocology.runtimeconfig.json
+C:\Users\Admin\Documents\GODOT\Astrocology\.godot\mono\temp\bin\Debug\Astrocology.dll
+C:\Users\Admin\Documents\GODOT\Astrocology\.godot\mono\temp\bin\Debug\Astrocology.pdb
+C:\Users\Admin\Documents\GODOT\Astrocology\.godot\mono\temp\bin\Debug\GodotSharp.dll
+C:\Users\Admin\Documents\GODOT\Astrocology\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+C:\Users\Admin\Documents\GODOT\Astrocology\.godot\mono\temp\obj\Debug\Astrocol.E9AF1B03.Up2Date
+C:\Users\Admin\Documents\GODOT\Astrocology\.godot\mono\temp\obj\Debug\Astrocology.dll
+C:\Users\Admin\Documents\GODOT\Astrocology\.godot\mono\temp\obj\Debug\refint\Astrocology.dll
+C:\Users\Admin\Documents\GODOT\Astrocology\.godot\mono\temp\obj\Debug\Astrocology.pdb
+C:\Users\Admin\Documents\GODOT\Astrocology\.godot\mono\temp\obj\Debug\Astrocology.genruntimeconfig.cache
+C:\Users\Admin\Documents\GODOT\Astrocology\.godot\mono\temp\obj\Debug\ref\Astrocology.dll

@@ -1,0 +1,298 @@
+[gd_scene load_steps=19 format=3 uid="uid://cxgyba2bi3kgl"]
+
+[ext_resource type="Texture2D" uid="uid://duhanje1uye0i" path="res://OBJECTS/WORLDOBJECT/SPRITES/redWater.png" id="1_issx0"]
+[ext_resource type="Script" path="res://MAIN/Main.cs" id="1_yxe3i"]
+[ext_resource type="Script" path="res://OBJECTS/SPAWNERS/Spawn.cs" id="2_om8gv"]
+[ext_resource type="Script" path="res://MAIN/Camera2D.gd" id="3_avf6n"]
+[ext_resource type="PackedScene" uid="uid://csfdo5cmn3jis" path="res://OBJECTS/WORLDOBJECT/world_object.tscn" id="3_qxxvx"]
+[ext_resource type="Texture2D" uid="uid://df5wcj28dw38h" path="res://OBJECTS/CREATURE/SPRITES/blue.png" id="4_qfsy8"]
+[ext_resource type="PackedScene" uid="uid://b4i0bt7un8uxm" path="res://OBJECTS/CREATURE/creature.tscn" id="5_ho16l"]
+[ext_resource type="Texture2D" uid="uid://ba6vf3huexv17" path="res://OBJECTS/CREATURE/SPRITES/green.png" id="6_7328q"]
+[ext_resource type="Texture2D" uid="uid://b8iqoxm6lbkhk" path="res://OBJECTS/WORLDOBJECT/SPRITES/greenBush.png" id="7_cnf7g"]
+[ext_resource type="Texture2D" uid="uid://cvj5ofga1nb2h" path="res://OBJECTS/WORLDOBJECT/SPRITES/buildingWaterTower.png" id="8_x1f3w"]
+[ext_resource type="Texture2D" uid="uid://b8ga2bjqhi2xe" path="res://OBJECTS/WORLDOBJECT/SPRITES/treePurpleEmpty.png" id="9_r0n6q"]
+[ext_resource type="PackedScene" uid="uid://bveqg14fbtg8i" path="res://OBJECTS/CHARACTER/character.tscn" id="10_c7oer"]
+[ext_resource type="Texture2D" uid="uid://b832dbo3u3b36" path="res://OBJECTS/CHARACTER/SPRITES/human.png" id="10_e8xuu"]
+[ext_resource type="Texture2D" uid="uid://dqpjdp76ilrph" path="res://OBJECTS/WORLDOBJECT/SPRITES/capsule.png" id="12_ujrvk"]
+[ext_resource type="Texture2D" uid="uid://ctjrw1c1mx1q8" path="res://OBJECTS/WORLDOBJECT/SPRITES/tent.png" id="13_q6hgq"]
+[ext_resource type="Texture2D" uid="uid://p58u2ivm8iim" path="res://OBJECTS/E/sand.png" id="14_jt3jy"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_ffcem"]
+vertices = PackedVector2Array(3452, -2214, 2847, 1629, -2989, 1462, -2710, -2262, 1640, -2302)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(1640, -2312, -2720, -2272, -3000, 1472, 2856, 1640, 3464, -2224)])
+source_geometry_group_name = &"navigation_polygon_source_group"
+
+[sub_resource type="LabelSettings" id="LabelSettings_cib1u"]
+shadow_color = Color(0, 0, 0, 0.109804)
+
+[node name="Tree" type="Node2D"]
+z_as_relative = false
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -100
+texture = ExtResource("14_jt3jy")
+
+[node name="Main" type="Node2D" parent="."]
+script = ExtResource("1_yxe3i")
+
+[node name="MainNavRegion" type="NavigationRegion2D" parent="."]
+visible = false
+position = Vector2(-488, 112)
+navigation_polygon = SubResource("NavigationPolygon_ffcem")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("3_avf6n")
+
+[node name="Panel" type="Panel" parent="Camera2D"]
+modulate = Color(0, 0, 0, 1)
+z_index = 9
+offset_left = -280.0
+offset_top = -320.0
+offset_right = 288.0
+offset_bottom = -264.0
+
+[node name="Label" type="Label" parent="Camera2D"]
+unique_name_in_owner = true
+z_index = 9
+offset_left = -176.0
+offset_top = -320.0
+offset_right = 176.0
+offset_bottom = -264.0
+text = "WATER 10 FOOD 20"
+label_settings = SubResource("LabelSettings_cib1u")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Nature" type="Node2D" parent="."]
+y_sort_enabled = true
+scale = Vector2(2, 2)
+
+[node name="greenBush4" type="Sprite2D" parent="Nature"]
+y_sort_enabled = true
+position = Vector2(-184, 8)
+texture = ExtResource("9_r0n6q")
+script = ExtResource("2_om8gv")
+sceneToSpawn = ExtResource("3_qxxvx")
+species = 9
+startingTags = [3, 19]
+
+[node name="waterSpawn2" type="Sprite2D" parent="Nature"]
+z_as_relative = false
+position = Vector2(-40, 80)
+texture = ExtResource("1_issx0")
+script = ExtResource("2_om8gv")
+sceneToSpawn = ExtResource("3_qxxvx")
+species = 2
+startingTags = [4, 5]
+
+[node name="waterSpawn1" type="Sprite2D" parent="Nature"]
+z_as_relative = false
+position = Vector2(-92, 40)
+texture = ExtResource("1_issx0")
+script = ExtResource("2_om8gv")
+sceneToSpawn = ExtResource("3_qxxvx")
+species = 2
+startingTags = [4, 5]
+
+[node name="waterSpawn3" type="Sprite2D" parent="Nature"]
+z_as_relative = false
+position = Vector2(-104, 100)
+texture = ExtResource("1_issx0")
+script = ExtResource("2_om8gv")
+sceneToSpawn = ExtResource("3_qxxvx")
+species = 2
+startingTags = [4, 5]
+
+[node name="waterSpawn4" type="Sprite2D" parent="Nature"]
+z_as_relative = false
+position = Vector2(-188, 116)
+texture = ExtResource("1_issx0")
+script = ExtResource("2_om8gv")
+sceneToSpawn = ExtResource("3_qxxvx")
+species = 2
+startingTags = [4, 5]
+
+[node name="waterSpawn4" type="Sprite2D" parent="Nature/waterSpawn4"]
+z_as_relative = false
+position = Vector2(832, -792)
+texture = ExtResource("1_issx0")
+script = ExtResource("2_om8gv")
+sceneToSpawn = ExtResource("3_qxxvx")
+species = 2
+startingTags = [4, 5]
+
+[node name="waterSpawn5" type="Sprite2D" parent="Nature"]
+z_as_relative = false
+position = Vector2(-164, 60)
+texture = ExtResource("1_issx0")
+script = ExtResource("2_om8gv")
+sceneToSpawn = ExtResource("3_qxxvx")
+species = 2
+startingTags = [4, 5]
+
+[node name="greenBush" type="Sprite2D" parent="Nature"]
+y_sort_enabled = true
+position = Vector2(-136, 76)
+texture = ExtResource("7_cnf7g")
+script = ExtResource("2_om8gv")
+sceneToSpawn = ExtResource("3_qxxvx")
+species = 10
+startingTags = [6]
+
+[node name="buildingWater" type="Sprite2D" parent="Nature"]
+y_sort_enabled = true
+position = Vector2(164, 8)
+texture = ExtResource("8_x1f3w")
+script = ExtResource("2_om8gv")
+sceneToSpawn = ExtResource("3_qxxvx")
+species = 11
+startingTags = [22]
+
+[node name="greenBush2" type="Sprite2D" parent="Nature"]
+y_sort_enabled = true
+position = Vector2(-100, 48)
+texture = ExtResource("7_cnf7g")
+script = ExtResource("2_om8gv")
+sceneToSpawn = ExtResource("3_qxxvx")
+species = 10
+startingTags = [6]
+
+[node name="greenBush6" type="Sprite2D" parent="Nature"]
+y_sort_enabled = true
+position = Vector2(452, -676)
+texture = ExtResource("7_cnf7g")
+script = ExtResource("2_om8gv")
+sceneToSpawn = ExtResource("3_qxxvx")
+species = 10
+startingTags = [6]
+
+[node name="greenBush6" type="Sprite2D" parent="Nature/greenBush6"]
+y_sort_enabled = true
+position = Vector2(76, 16)
+texture = ExtResource("7_cnf7g")
+script = ExtResource("2_om8gv")
+sceneToSpawn = ExtResource("3_qxxvx")
+species = 10
+startingTags = [6]
+
+[node name="greenBush6" type="Sprite2D" parent="Nature/greenBush6/greenBush6"]
+y_sort_enabled = true
+position = Vector2(56, -36)
+texture = ExtResource("7_cnf7g")
+script = ExtResource("2_om8gv")
+sceneToSpawn = ExtResource("3_qxxvx")
+species = 10
+startingTags = [6]
+
+[node name="greenBush6" type="Sprite2D" parent="Nature/greenBush6/greenBush6/greenBush6"]
+y_sort_enabled = true
+position = Vector2(-104, 60)
+texture = ExtResource("7_cnf7g")
+script = ExtResource("2_om8gv")
+sceneToSpawn = ExtResource("3_qxxvx")
+species = 10
+startingTags = [6]
+
+[node name="greenBush3" type="Sprite2D" parent="Nature"]
+y_sort_enabled = true
+position = Vector2(-200, 76)
+texture = ExtResource("7_cnf7g")
+script = ExtResource("2_om8gv")
+sceneToSpawn = ExtResource("3_qxxvx")
+species = 10
+startingTags = [6]
+
+[node name="greenBush5" type="Sprite2D" parent="Nature"]
+y_sort_enabled = true
+position = Vector2(520, -752)
+texture = ExtResource("9_r0n6q")
+script = ExtResource("2_om8gv")
+sceneToSpawn = ExtResource("3_qxxvx")
+species = 9
+startingTags = [3]
+
+[node name="Node2D" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Human" type="Sprite2D" parent="Node2D"]
+y_sort_enabled = true
+position = Vector2(240, 80)
+scale = Vector2(2, 2)
+texture = ExtResource("10_e8xuu")
+script = ExtResource("2_om8gv")
+sceneToSpawn = ExtResource("10_c7oer")
+species = 1
+startingTags = [20]
+
+[node name="capsule" type="Sprite2D" parent="Node2D"]
+y_sort_enabled = true
+position = Vector2(152, -88)
+scale = Vector2(2, 2)
+texture = ExtResource("12_ujrvk")
+script = ExtResource("2_om8gv")
+sceneToSpawn = ExtResource("3_qxxvx")
+species = 6
+startingTags = [5, 6, 22]
+
+[node name="capsule2" type="Sprite2D" parent="Node2D"]
+y_sort_enabled = true
+position = Vector2(392, -96)
+scale = Vector2(2, 2)
+texture = ExtResource("13_q6hgq")
+script = ExtResource("2_om8gv")
+sceneToSpawn = ExtResource("3_qxxvx")
+species = 5
+startingTags = [22, 23]
+
+[node name="Node2D2" type="Node2D" parent="."]
+scale = Vector2(2, 2)
+
+[node name="creatureSpawn1" type="Sprite2D" parent="Node2D2"]
+y_sort_enabled = true
+position = Vector2(128, -128)
+texture = ExtResource("4_qfsy8")
+script = ExtResource("2_om8gv")
+sceneToSpawn = ExtResource("5_ho16l")
+species = 3
+
+[node name="creatureSpawn2" type="Sprite2D" parent="Node2D2"]
+y_sort_enabled = true
+position = Vector2(-468, 28)
+texture = ExtResource("6_7328q")
+script = ExtResource("2_om8gv")
+sceneToSpawn = ExtResource("5_ho16l")
+species = 4
+
+[node name="creatureSpawn3" type="Sprite2D" parent="Node2D2"]
+y_sort_enabled = true
+position = Vector2(144, -92)
+texture = ExtResource("4_qfsy8")
+script = ExtResource("2_om8gv")
+sceneToSpawn = ExtResource("5_ho16l")
+species = 3
+
+[node name="creatureSpawn4" type="Sprite2D" parent="Node2D2"]
+y_sort_enabled = true
+position = Vector2(224, -160)
+texture = ExtResource("4_qfsy8")
+script = ExtResource("2_om8gv")
+sceneToSpawn = ExtResource("5_ho16l")
+species = 3
+
+[node name="creatureSpawn6" type="Sprite2D" parent="Node2D2"]
+y_sort_enabled = true
+position = Vector2(-1354.07, -867.394)
+texture = ExtResource("6_7328q")
+script = ExtResource("2_om8gv")
+sceneToSpawn = ExtResource("5_ho16l")
+species = 4
+
+[node name="creatureSpawn5" type="Sprite2D" parent="Node2D2"]
+y_sort_enabled = true
+position = Vector2(-360, 52)
+texture = ExtResource("6_7328q")
+script = ExtResource("2_om8gv")
+sceneToSpawn = ExtResource("5_ho16l")
+species = 4

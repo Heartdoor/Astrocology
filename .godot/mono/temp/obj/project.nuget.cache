@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "VoEC/75n3DZ9xBaeuhRxHiO7xMM9qPJ3u6brDeDTE/coIK0lyjPnGnHJSV+j1ItHK397Pg6j7tPjeqP9csAMNw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Admin\\Documents\\GODOT\\Astrocology\\Astrocology.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\godot.sourcegenerators\\4.2.1\\godot.sourcegenerators.4.2.1.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\godotsharp\\4.2.1\\godotsharp.4.2.1.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\godotsharpeditor\\4.2.1\\godotsharpeditor.4.2.1.nupkg.sha512"
+  ],
+  "logs": []
+}
